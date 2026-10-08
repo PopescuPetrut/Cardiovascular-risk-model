@@ -13,8 +13,8 @@ Risk factor thresholds based on [WHO Cardiovascular Diseases](https://www.who.in
 |---|---|
 | `data_frame_generation.py` | Synthetic dataset generation |
 | `data_eda.py` | Exploratory data analysis |
-| `train_mode.py` | Model training & evaluation |
-| `graphic_design.py` | Gradio GUI (Bonus 4.1) |
+| `train_model.py` | Model training & evaluation |
+| `graphic_design.py` | Gradio GUI |
 | `data_training.csv` | 700-instance training split |
 | `data_testing.csv` | 300-instance test split |
 
@@ -64,7 +64,7 @@ Chosen for robustness to outliers and native handling of mixed feature types wit
 
 **Preprocessing:** mean/mode imputation for missing values + manual label encoding (`Masculin→1`, `Feminin→0`, `Yes→1`, `No→0`).
 
-**Results:** accuracy ~85–90%; low-risk class predicted more precisely due to mild class imbalance.
+**Results:** 93.33% accuracy on the test set; 95% precision and 82% recall for the high-risk class.
 
 ```
 Confusion matrix (test set, 300 instances):
@@ -79,7 +79,7 @@ Actual Yes         16             73
 
 ```bash
 pip install gradio
-python graphic_design.py
+python ./src/graphic_design.py
 # opens at http://127.0.0.1:7860
 ```
 
