@@ -75,7 +75,7 @@ Actual Yes         16             73
 
 ---
 
-## 4. Bonus — Gradio GUI
+## 4. Gradio GUI
 
 ```bash
 pip install gradio
