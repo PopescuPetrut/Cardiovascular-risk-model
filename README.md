@@ -1,6 +1,6 @@
-# Cardiovascular Risk Classifier — PCLP3 Part I
+# Cardiovascular Risk Classifier
 
-**Popescu Petruț-Alin | Grupa 312 CA**
+**Popescu Petruț-Alin**
 
 Binary classification task: predict whether a patient has **high cardiovascular risk** (Yes / No).  
 Risk factor thresholds based on [WHO Cardiovascular Diseases](https://www.who.int/health-topics/cardiovascular-diseases).

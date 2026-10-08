@@ -28,7 +28,7 @@ for name, df in dataset.items():
 		plt.title(f'Distribution for {col}, ({name})')
 
 	plt.tight_layout()
-	plt.savefig(f'grafichs/numerical_distribution_for_{name.lower()}.png')
+	plt.savefig(f'plots/numerical_distribution_for_{name.lower()}.png')
 	plt.close()
 
 	cat_cols = df.select_dtypes(include = ['object', 'str']).columns
@@ -36,11 +36,11 @@ for name, df in dataset.items():
 	for i, col in enumerate(cat_cols, 1):
 		plt.subplot(1, 4, i)
 		sb.countplot(data = df, x = col, hue = col, palette = 'Set2', legend = False)
-		plt.title(f'Distributin for {col} ({name})')
+		plt.title(f'Distribution for {col} ({name})')
 		plt.xticks(rotation = 15)
 	
 	plt.tight_layout()
-	plt.savefig(f'grafichs/categorical_distribution_for_{name.lower()}.png')
+	plt.savefig(f'plots/categorical_distribution_for_{name.lower()}.png')
 	plt.close()
 
 	plt.figure(figsize = (15, 15))
@@ -50,23 +50,23 @@ for name, df in dataset.items():
 		plt.title(f'Outlier detection {col} ({name})')
 
 	plt.tight_layout()
-	plt.savefig(f'grafichs/boxplot_outliers_for_{name.lower()}.png')
+	plt.savefig(f'plots/boxplot_outliers_for_{name.lower()}.png')
 	plt.close()
 
 	plt.figure(figsize = (15, 15))
 	heatmap = df[num_cols].corr()
 	sb.heatmap(heatmap, annot = True, cmap = 'Blues', fmt = ".2f", linewidths = 1)
-	plt.title(f'Corelation matrix ({name})')
+	plt.title(f'Corrrelation matrix ({name})')
 	plt.tight_layout()
-	plt.savefig(f'grafichs/heatmap_for_{name.lower()}.png')
+	plt.savefig(f'plots/heatmap_for_{name.lower()}.png')
 	plt.close()
 
 	plt.figure(figsize = (15, 15))
 	for i, col in enumerate(['Age', 'Pulse', 'Colesterol'], 1):
 		plt.subplot(1, 3, i)
 		sb.violinplot(data = df, x = 'Cardiovascular risk', y = col, hue = 'Cardiovascular risk', palette = 'Pastel1', legend = False)
-		plt.title(f'{col} vs cardio vascular risk ({name})')
+		plt.title(f'{col} vs cardiovascular risk ({name})')
 	
 	plt.tight_layout()
-	plt.savefig(f'grafichs/targe_relations_for_{name.lower()}.png')
+	plt.savefig(f'plots/targe_relations_for_{name.lower()}.png')
 	plt.close()

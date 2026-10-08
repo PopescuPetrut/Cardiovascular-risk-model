@@ -43,7 +43,7 @@ accuracy = accuracy_score(y_test, y_pred)
 
 print(f'Model accuracy is: {accuracy * 100: .2f}%\n')
 
-print("Clasification description:")
+print("Classification description:")
 print(classification_report(y_test, y_pred))
 
 cm = confusion_matrix(y_test, y_pred)
@@ -53,7 +53,7 @@ sb.heatmap(cm, annot = True, fmt = 'd', cmap = 'Blues', xticklabels = ['Low risk
 
 plt.xlabel('Model prediction')
 plt.ylabel('Real value')
-plt.title('Confussion matrix for random forest model')
+plt.title('Confussion matrix for Random Forest model')
 plt.tight_layout()
-plt.savefig('grafichs/confusion_matrix.png')
+plt.savefig('plots/confusion_matrix.png')
 plt.close()
