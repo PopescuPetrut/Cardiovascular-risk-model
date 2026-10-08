@@ -68,5 +68,5 @@ for name, df in dataset.items():
 		plt.title(f'{col} vs cardiovascular risk ({name})')
 	
 	plt.tight_layout()
-	plt.savefig(f'plots/targe_relations_for_{name.lower()}.png')
+	plt.savefig(f'plots/target_relations_for_{name.lower()}.png')
 	plt.close()

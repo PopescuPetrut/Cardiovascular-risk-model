@@ -53,7 +53,7 @@ sb.heatmap(cm, annot = True, fmt = 'd', cmap = 'Blues', xticklabels = ['Low risk
 
 plt.xlabel('Model prediction')
 plt.ylabel('Real value')
-plt.title('Confussion matrix for Random Forest model')
+plt.title('Confusion matrix for Random Forest model')
 plt.tight_layout()
 plt.savefig('plots/confusion_matrix.png')
 plt.close()
